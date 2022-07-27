@@ -1,0 +1,28 @@
+<!--Combine two tricks to disable Youtube's relative videos at the pause and end.-->
+<!--ref: https://stackoverflow.com/questions/57820478/how-to-disable-related-videos-from-an-embedded-youtube-playlist-->
+
+<script src="/js/hideYTrel.js"></script>
+
+<style>
+.meta-media {
+  position: relative;
+  padding-bottom: 56.25%;
+  width: 100%;
+  margin: 5px 5px 5px 5px;
+}
+.video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+<div class="meta-media">
+  <!--<iframe src="https://www.youtube.com/embed/{{ .Get "embed" }}?version=3&vq=hd720&autoplay=1&mute=1" class="video" frameborder="0" allowfullscreen></iframe>-->
+  <!--<iframe src="https://www.youtube.com/embed/{{ .Get "embed" }}?version=3&vq=hd720&" class="video" autoplay=1 mute=1 frameborder="0" allowfullscreen></iframe>-->
+  <!--<iframe src="https://www.youtube.com/embed/{{ .Get "embed" }}?version=3&vq=hd720" class="video" frameborder="0" allowfullscreen></iframe>-->
+
+  <!--<iframe src="https://www.youtube.com/embed/{{ .Get "embed" }}" frameborder="0" allowfullscreen></iframe>-->
+  <iframe class="video" src="https://www.youtube.com/embed/{{ .Get "embed" }}?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  <!--<iframe class="video" src="https://www.youtube.com/embed/{{ .Get "embed" }}?rel=0&amp;showinfo=0&mute=0&control=0&loop=1&playlist={{ .Get "embed" }}" frameborder="0" allowfullscreen></iframe>-->
+</div>
