@@ -7,7 +7,7 @@ ShowToc: true
 TocOpen: true
 aliases: ["/this-is-an-aliase"]
 tags: ["旅遊"]
-author: "Tom Chen"
+author: ["Kevin Lee", "路人甲"]
 cover:
   image: gallery/posts-2021-07-03-A/IMG_7603.jpg
   alt: dummy alt
@@ -35,15 +35,6 @@ Alice   | 23
 - [ ] Do something else
 
 
-### Shortcodes: foldable
-{{< details  這是一段可以摺疊的區塊 >}}
-**Collapsed text**
-也豆皮登相門後工誰收外道？您又耍羽尾背錯休河十問跳飽氣春把金！年風品？土西者力：可自哭什戊美共向雨高訴高再朵，明什午意發幼兔皮：貝功想葉亭到土往奶玩欠可士，重衣游別話？許豆而夕。
-苦風金斥。尤位我多由立空里己告肖飽蝴哪月帽、包干丁旦細活，浪她年或視包吧土主學耳過坡呢。美肖旁信三荷。
-{{</* gallery dir=gallery/posts-2021-07-03-A /*/>}}
-大羊友冒節同羽室，牠不晚房犬躲乍隻麼詞語流兒貫貫：巾跟帶火事地視六斤唱抱都丟沒世你，牠開息幫兌未嗎蝶友開已人。西鴨課把。
-{{< /details >}}
-
 ### 定義Lists
 Cat
 : Fluffy animal everyone likes
@@ -58,10 +49,39 @@ This is a footnote.[^1]
 
 ~~I am stirked wo wo~~
 
-### 使用awesome font {{< awesome fa-solid fa-cake-candles >}}
+### 使用awesome font
+{{< awesome fa-solid fa-cake-candles >}}
 here are some examples {{< awesome fa-brands fa-cc-jcb >}}{{< awesome fa-brands fa-docker >}}{{< awesome fa-solid fa-face-kiss-wink-heart >}}
 
-  
+### 折疊: details
+{{< details  這是一段可以摺疊的區塊 >}}
+**Collapsed text**
+
+也豆皮登相門後工誰收外道？您又耍羽尾背錯休河十問跳飽氣春把金！年風品？土西者力：可自哭什戊美共向雨高訴高再朵，明什午意發幼兔皮：貝功想葉亭到土往奶玩欠可士，重衣游別話？許豆而夕。
+苦風金斥。尤位我多由立空里己告肖飽蝴哪月帽、包干丁旦細活，浪她年或視包吧土主學耳過坡呢。美肖旁信三荷。
+
+**Collapsed gallery**
+{{</* gallery dir=gallery/posts-2021-07-03-A /*/>}}
+{{< /details >}}
+
+### Youtube影片
+* 使用shortcode youtube顯示youtube影片
+```
+{{</* youtube embed="VQraviuwbzU" */>}}
+```
+{{< youtube embed="VQraviuwbzU" >}}
+
+
+### 空行
+```
+paragraph1
+{{</* br 3 */>}}
+paragraph2
+```
+paragraph1
+{{< br 3 >}}
+paragraph2
+
 ## 讓寫文章變得有趣:heart:
 ### 文章展示
 也豆皮登相門後工誰收外道？您又耍羽尾背錯休河十問跳飽氣春把金！年風品？土西者力：可自哭什戊美共向雨高訴高再朵，明什午意發幼兔皮：貝功想葉亭到土往奶玩欠可士，重衣游別話？許豆而夕。
