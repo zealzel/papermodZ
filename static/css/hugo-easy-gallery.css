@@ -1,45 +1,136 @@
 /*
-Put this file in /static/css/hugo-easy-gallery.css
-Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
-*/
-
-
-/*
 Grid Layout Styles
 */
+
 .gallery {
     overflow: hidden;
     margin: 10px;
-    /*max-width: 768px;*/
-
     max-width: 1700px;
 }
 .gallery .box {
     float: left;
     position: relative;
-    /* Default: 1 tile wide */
     width: 100%;
-    padding-bottom: 100%; 
+    padding-bottom: 100%;
 }
+
+.gallery-2col {
+    overflow: hidden;
+    margin: 10px;
+    max-width: 1700px;
+}
+.gallery-2col .box {
+    float: left;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.gallery-3col {
+    overflow: hidden;
+    margin: 10px;
+    max-width: 1700px;
+}
+.gallery-3col .box {
+    float: left;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.gallery-4col {
+    overflow: hidden;
+    margin: 10px;
+    max-width: 1700px;
+}
+.gallery-4col .box {
+    float: left;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.gallery-5col {
+    overflow: hidden;
+    margin: 10px;
+    max-width: 1700px;
+}
+.gallery-5col .box {
+    float: left;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.gallery-6col {
+    overflow: hidden;
+    margin: 10px;
+    max-width: 1700px;
+}
+.gallery-6col .box {
+    float: left;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
 @media only screen and (min-width : 365px) {
     /* Tablet view: 2 tiles */
     .gallery .box {
         width: 50%;
         padding-bottom: 50%;
     }
+    .gallery-2col .box {
+        width: 50%;
+        padding-bottom: 50%;
+    }
+    .gallery-3col .box {
+        width: 50%;
+        padding-bottom: 50%;
+    }
+    .gallery-4col .box {
+        width: 50%;
+        padding-bottom: 50%;
+    }
+    .gallery-5col .box {
+        width: 50%;
+        padding-bottom: 50%;
+    }
+    .gallery-5col .box {
+        width: 50%;
+        padding-bottom: 50%;
+    }
+    .gallery-6col .box {
+        width: 50%;
+        padding-bottom: 50%;
+    }
 }
+
 @media only screen and (min-width : 480px) {
     /* Small desktop / ipad view: 3 tiles */
     .gallery .box {
-        /* 3 tiles */
-        /*width: 33.3%;*/
-        /*padding-bottom: 33.3%; */
-        /* 4 tiles */
-        /*width: 25%;*/
-        /*padding-bottom: 25%;*/
-        /* 4 tiles */
         width: 20%;
         padding-bottom: 20%;
+    }
+    .gallery-2col .box {
+        width: 50%;
+        padding-bottom: 50%;
+    }
+    .gallery-3col .box {
+        width: 33.3%;
+        padding-bottom: 33.3%;
+    }
+    .gallery-4col .box {
+        width: 25%;
+        padding-bottom: 25%;
+    }
+    .gallery-5col .box {
+        width: 20%;
+        padding-bottom: 20%;
+    }
+    .gallery-6col .box {
+        width: 16.666%;
+        padding-bottom: 16.666%;
     }
 }
 @media only screen and (min-width : 9999px) {
@@ -54,8 +145,8 @@ Grid Layout Styles
 Transition styles
 */
 .gallery.hover-transition figure,
-.gallery.hover-effect-zoom .img, 
-.gallery:not(.caption-effect-appear) figcaption,
+.gallery.hover-effect-zoom .img,
+.gallery.caption-effect-appear) figcaption,
 .fancy-figure:not(.caption-effect-appear) figcaption {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -76,23 +167,21 @@ figure {
     top: 5px;
     bottom: 5px;
 }
-.gallery.hover-effect-grow figure:hover {
+.gallery figure:hover {
     transform: scale(1.05);
 }
-.gallery.hover-effect-shrink figure:hover {
+.gallery figure:hover {
     transform: scale(0.95);
 }
-.gallery.hover-effect-slidedown figure:hover {
+.gallery figure:hover {
     transform: translateY(5px);
 }
-.gallery.hover-effect-slideup figure:hover {
+.gallery figure:hover {
     transform: translateY(-5px);
 }
-
 /*
 img / a styles
 */
-
 .gallery .img {
     position: absolute;
     left: 0;
@@ -103,7 +192,7 @@ img / a styles
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
-.gallery.hover-effect-zoom figure:hover .img {
+.gallery figure:hover .img {
     transform: scale(1.05);
 }
 .gallery img {
@@ -116,7 +205,6 @@ figure a {
     top: 0;
     bottom: 0;
 }
-
 /*
 figcaption styles
 */
@@ -139,38 +227,615 @@ figcaption styles
     opacity: 1;
     cursor: pointer;
 }
-.gallery.caption-position-none figcaption,
+.gallery figcaption,
 .fancy-figure.caption-position-none figcaption  {
     display: none;
 }
-.gallery.caption-position-center figcaption,
+.gallery figcaption,
 .fancy-figure.caption-position-center figcaption {
     top: 0;
     padding: 40% 5px;
 }
-.gallery.caption-position-bottom figcaption,
+.gallery figcaption,
 .fancy-figure.caption-position-bottom figcaption {
     /*padding: 5px;*/
     padding: 0px;
 }
-.gallery.caption-effect-fade figure:not(:hover) figcaption,
-.gallery.caption-effect-appear figure:not(:hover) figcaption,
+.gallery figure:not(:hover) figcaption,
+.gallery figure:not(:hover) figcaption,
 .fancy-figure.caption-effect-fade figure:not(:hover) figcaption,
 .fancy-figure.caption-effect-appear figure:not(:hover) figcaption {
     background: rgba(0, 0, 0, 0);
     opacity: 0;
 }
-.gallery.caption-effect-slide.caption-position-bottom figure:not(:hover) figcaption,
+.gallery figure:not(:hover) figcaption,
 .fancy-figure.caption-effect-slide.caption-position-bottom figure:not(:hover) figcaption {
     margin-bottom: -100%;
 }
-.gallery.caption-effect-slide.caption-position-center figure:not(:hover) figcaption,
+.gallery figure:not(:hover) figcaption,
 .fancy-figure.caption-effect-slide.caption-position-center figure:not(:hover) figcaption  {
     top: 100%;
 }
-/*figcaption p {*/
-    /*margin: auto; [> override style in theme <]*/
-/*}*/
+
+/*
+Transition styles
+*/
+.gallery-2col.hover-transition figure,
+.gallery-2col.hover-effect-zoom .img,
+.gallery-2col:not(.caption-effect-appear) figcaption,
+.fancy-figure:not(.caption-effect-appear) figcaption {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+/*
+figure styles
+*/
+figure {
+    position:relative; /* purely to allow absolution positioning of figcaption */
+    overflow: hidden;
+}
+.gallery-2col figure {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+}
+.gallery-2col.hover-effect-grow figure:hover {
+    transform: scale(1.05);
+}
+.gallery-2col.hover-effect-shrink figure:hover {
+    transform: scale(0.95);
+}
+.gallery-2col.hover-effect-slidedown figure:hover {
+    transform: translateY(5px);
+}
+.gallery-2col.hover-effect-slideup figure:hover {
+    transform: translateY(-5px);
+}
+/*
+img / a styles
+*/
+.gallery-2col .img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.gallery-2col.hover-effect-zoom figure:hover .img {
+    transform: scale(1.05);
+}
+.gallery-2col img {
+    display: none; /* only show the img if not inside a gallery */
+}
+figure a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+/*
+figcaption styles
+*/
+.gallery-2col figcaption,
+.fancy-figure figcaption {
+    position: absolute;
+    /*position: relative;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    /*color: #FFF;*/
+    text-align: center;
+    font-size: 75%; /* change this if you want bigger text */
+    /*background: rgba(0, 0, 0, 0.5);*/
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    cursor: pointer;
+}
+.gallery-2col.caption-position-none figcaption,
+.fancy-figure.caption-position-none figcaption  {
+    display: none;
+}
+.gallery-2col.caption-position-center figcaption,
+.fancy-figure.caption-position-center figcaption {
+    top: 0;
+    padding: 40% 5px;
+}
+.gallery-2col.caption-position-bottom figcaption,
+.fancy-figure.caption-position-bottom figcaption {
+    /*padding: 5px;*/
+    padding: 0px;
+}
+.gallery-2col.caption-effect-fade figure:not(:hover) figcaption,
+.gallery-2col.caption-effect-appear figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-fade figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-appear figure:not(:hover) figcaption {
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+.gallery-2col.caption-effect-slide.caption-position-bottom figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-slide.caption-position-bottom figure:not(:hover) figcaption {
+    margin-bottom: -100%;
+}
+.gallery-2col.caption-effect-slide.caption-position-center figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-slide.caption-position-center figure:not(:hover) figcaption  {
+    top: 100%;
+}
+
+/*
+Transition styles
+*/
+.gallery-3col.hover-transition figure,
+.gallery-3col.hover-effect-zoom .img,
+.gallery-3col:not(.caption-effect-appear) figcaption,
+.fancy-figure:not(.caption-effect-appear) figcaption {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+/*
+figure styles
+*/
+figure {
+    position:relative; /* purely to allow absolution positioning of figcaption */
+    overflow: hidden;
+}
+.gallery-3col figure {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+}
+.gallery-3col.hover-effect-grow figure:hover {
+    transform: scale(1.05);
+}
+.gallery-3col.hover-effect-shrink figure:hover {
+    transform: scale(0.95);
+}
+.gallery-3col.hover-effect-slidedown figure:hover {
+    transform: translateY(5px);
+}
+.gallery-3col.hover-effect-slideup figure:hover {
+    transform: translateY(-5px);
+}
+/*
+img / a styles
+*/
+.gallery-3col .img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.gallery-3col.hover-effect-zoom figure:hover .img {
+    transform: scale(1.05);
+}
+.gallery-3col img {
+    display: none; /* only show the img if not inside a gallery */
+}
+figure a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+/*
+figcaption styles
+*/
+.gallery-3col figcaption,
+.fancy-figure figcaption {
+    position: absolute;
+    /*position: relative;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    /*color: #FFF;*/
+    text-align: center;
+    font-size: 75%; /* change this if you want bigger text */
+    /*background: rgba(0, 0, 0, 0.5);*/
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    cursor: pointer;
+}
+.gallery-3col.caption-position-none figcaption,
+.fancy-figure.caption-position-none figcaption  {
+    display: none;
+}
+.gallery-3col.caption-position-center figcaption,
+.fancy-figure.caption-position-center figcaption {
+    top: 0;
+    padding: 40% 5px;
+}
+.gallery-3col.caption-position-bottom figcaption,
+.fancy-figure.caption-position-bottom figcaption {
+    /*padding: 5px;*/
+    padding: 0px;
+}
+.gallery-3col.caption-effect-fade figure:not(:hover) figcaption,
+.gallery-3col.caption-effect-appear figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-fade figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-appear figure:not(:hover) figcaption {
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+.gallery-3col.caption-effect-slide.caption-position-bottom figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-slide.caption-position-bottom figure:not(:hover) figcaption {
+    margin-bottom: -100%;
+}
+.gallery-3col.caption-effect-slide.caption-position-center figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-slide.caption-position-center figure:not(:hover) figcaption  {
+    top: 100%;
+}
+
+/*
+Transition styles
+*/
+.gallery-4col.hover-transition figure,
+.gallery-4col.hover-effect-zoom .img,
+.gallery-4col:not(.caption-effect-appear) figcaption,
+.fancy-figure:not(.caption-effect-appear) figcaption {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+/*
+figure styles
+*/
+figure {
+    position:relative; /* purely to allow absolution positioning of figcaption */
+    overflow: hidden;
+}
+.gallery-4col figure {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+}
+.gallery-4col.hover-effect-grow figure:hover {
+    transform: scale(1.05);
+}
+.gallery-4col.hover-effect-shrink figure:hover {
+    transform: scale(0.95);
+}
+.gallery-4col.hover-effect-slidedown figure:hover {
+    transform: translateY(5px);
+}
+.gallery-4col.hover-effect-slideup figure:hover {
+    transform: translateY(-5px);
+}
+/*
+img / a styles
+*/
+.gallery-4col .img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.gallery-4col.hover-effect-zoom figure:hover .img {
+    transform: scale(1.05);
+}
+.gallery-4col img {
+    display: none; /* only show the img if not inside a gallery */
+}
+figure a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+/*
+figcaption styles
+*/
+.gallery-4col figcaption,
+.fancy-figure figcaption {
+    position: absolute;
+    /*position: relative;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    /*color: #FFF;*/
+    text-align: center;
+    font-size: 75%; /* change this if you want bigger text */
+    /*background: rgba(0, 0, 0, 0.5);*/
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    cursor: pointer;
+}
+.gallery-4col.caption-position-none figcaption,
+.fancy-figure.caption-position-none figcaption  {
+    display: none;
+}
+.gallery-4col.caption-position-center figcaption,
+.fancy-figure.caption-position-center figcaption {
+    top: 0;
+    padding: 40% 5px;
+}
+.gallery-4col.caption-position-bottom figcaption,
+.fancy-figure.caption-position-bottom figcaption {
+    /*padding: 5px;*/
+    padding: 0px;
+}
+.gallery-4col.caption-effect-fade figure:not(:hover) figcaption,
+.gallery-4col.caption-effect-appear figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-fade figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-appear figure:not(:hover) figcaption {
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+.gallery-4col.caption-effect-slide.caption-position-bottom figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-slide.caption-position-bottom figure:not(:hover) figcaption {
+    margin-bottom: -100%;
+}
+.gallery-4col.caption-effect-slide.caption-position-center figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-slide.caption-position-center figure:not(:hover) figcaption  {
+    top: 100%;
+}
+
+/*
+Transition styles
+*/
+.gallery-5col.hover-transition figure,
+.gallery-5col.hover-effect-zoom .img,
+.gallery-5col:not(.caption-effect-appear) figcaption,
+.fancy-figure:not(.caption-effect-appear) figcaption {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+/*
+figure styles
+*/
+figure {
+    position:relative; /* purely to allow absolution positioning of figcaption */
+    overflow: hidden;
+}
+.gallery-5col figure {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+}
+.gallery-5col.hover-effect-grow figure:hover {
+    transform: scale(1.05);
+}
+.gallery-5col.hover-effect-shrink figure:hover {
+    transform: scale(0.95);
+}
+.gallery-5col.hover-effect-slidedown figure:hover {
+    transform: translateY(5px);
+}
+.gallery-5col.hover-effect-slideup figure:hover {
+    transform: translateY(-5px);
+}
+/*
+img / a styles
+*/
+.gallery-5col .img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.gallery-5col.hover-effect-zoom figure:hover .img {
+    transform: scale(1.05);
+}
+.gallery-5col img {
+    display: none; /* only show the img if not inside a gallery */
+}
+figure a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+/*
+figcaption styles
+*/
+.gallery-5col figcaption,
+.fancy-figure figcaption {
+    position: absolute;
+    /*position: relative;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    /*color: #FFF;*/
+    text-align: center;
+    font-size: 75%; /* change this if you want bigger text */
+    /*background: rgba(0, 0, 0, 0.5);*/
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    cursor: pointer;
+}
+.gallery-5col.caption-position-none figcaption,
+.fancy-figure.caption-position-none figcaption  {
+    display: none;
+}
+.gallery-5col.caption-position-center figcaption,
+.fancy-figure.caption-position-center figcaption {
+    top: 0;
+    padding: 40% 5px;
+}
+.gallery-5col.caption-position-bottom figcaption,
+.fancy-figure.caption-position-bottom figcaption {
+    /*padding: 5px;*/
+    padding: 0px;
+}
+.gallery-5col.caption-effect-fade figure:not(:hover) figcaption,
+.gallery-5col.caption-effect-appear figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-fade figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-appear figure:not(:hover) figcaption {
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+.gallery-5col.caption-effect-slide.caption-position-bottom figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-slide.caption-position-bottom figure:not(:hover) figcaption {
+    margin-bottom: -100%;
+}
+.gallery-5col.caption-effect-slide.caption-position-center figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-slide.caption-position-center figure:not(:hover) figcaption  {
+    top: 100%;
+}
+
+/*
+Transition styles
+*/
+.gallery-6col.hover-transition figure,
+.gallery-6col.hover-effect-zoom .img,
+.gallery-6col:not(.caption-effect-appear) figcaption,
+.fancy-figure:not(.caption-effect-appear) figcaption {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+/*
+figure styles
+*/
+figure {
+    position:relative; /* purely to allow absolution positioning of figcaption */
+    overflow: hidden;
+}
+.gallery-6col figure {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+}
+.gallery-6col.hover-effect-grow figure:hover {
+    transform: scale(1.05);
+}
+.gallery-6col.hover-effect-shrink figure:hover {
+    transform: scale(0.95);
+}
+.gallery-6col.hover-effect-slidedown figure:hover {
+    transform: translateY(5px);
+}
+.gallery-6col.hover-effect-slideup figure:hover {
+    transform: translateY(-5px);
+}
+/*
+img / a styles
+*/
+.gallery-6col .img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.gallery-6col.hover-effect-zoom figure:hover .img {
+    transform: scale(1.05);
+}
+.gallery-6col img {
+    display: none; /* only show the img if not inside a gallery */
+}
+figure a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+/*
+figcaption styles
+*/
+.gallery-6col figcaption,
+.fancy-figure figcaption {
+    position: absolute;
+    /*position: relative;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    /*color: #FFF;*/
+    text-align: center;
+    font-size: 75%; /* change this if you want bigger text */
+    /*background: rgba(0, 0, 0, 0.5);*/
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    cursor: pointer;
+}
+.gallery-6col.caption-position-none figcaption,
+.fancy-figure.caption-position-none figcaption  {
+    display: none;
+}
+.gallery-6col.caption-position-center figcaption,
+.fancy-figure.caption-position-center figcaption {
+    top: 0;
+    padding: 40% 5px;
+}
+.gallery-6col.caption-position-bottom figcaption,
+.fancy-figure.caption-position-bottom figcaption {
+    /*padding: 5px;*/
+    padding: 0px;
+}
+.gallery-6col.caption-effect-fade figure:not(:hover) figcaption,
+.gallery-6col.caption-effect-appear figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-fade figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-appear figure:not(:hover) figcaption {
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+.gallery-6col.caption-effect-slide.caption-position-bottom figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-slide.caption-position-bottom figure:not(:hover) figcaption {
+    margin-bottom: -100%;
+}
+.gallery-6col.caption-effect-slide.caption-position-center figure:not(:hover) figcaption,
+.fancy-figure.caption-effect-slide.caption-position-center figure:not(:hover) figcaption  {
+    top: 100%;
+}
 
 
 /* Kevin's customization of hugo-easy-gallery for PaperMod theme */
@@ -182,8 +847,7 @@ figcaption styles
     margin: auto; /* override style in theme */
     padding: 0;
 }
-
-.post-content figure, 
+.post-content figure,
 .post-content ul {
   margin-top: 0;
   margin-bottom: 0;
