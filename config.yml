@@ -1,6 +1,6 @@
 #baseURL: "https://adityatelange.github.io/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 baseURL: "/"
-title: MeiShanBlog
+title: PapermodZ
 paginate: 8
 #theme: PaperMod
 
@@ -166,7 +166,7 @@ services:
         disableInlineCSS: true
     twitter:
         disableInlineCSS: true
-          
+
 module:
   imports:
   - path: github.com/adityatelange/hugo-PaperMod
