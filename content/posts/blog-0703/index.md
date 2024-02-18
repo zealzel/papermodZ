@@ -120,9 +120,9 @@ here are some examples {{< awesome fa-brands fa-cc-jcb >}}{{< awesome fa-brands 
 - 注意圖片須放在/static/gallery/下的某一個資料夾中
 
 {{< gallery >}}
-{{< figure_in src="gallery/posts-2021-07-03-A/IMG_7327.jpg" >}}
-{{< figure_in src="gallery/posts-2021-07-03-A/IMG_7563.jpg" >}}
-{{< figure_in src="gallery/posts-2021-07-03-A/IMG_7707.jpg" >}}
+{{< figure_in src="gallery/posts-2021-07-03-A/IMG_7327.jpg" caption="第一張圖片說明">}}
+{{< figure_in src="gallery/posts-2021-07-03-A/IMG_7563.jpg" caption="second image description">}}
+{{< figure_in src="gallery/posts-2021-07-03-A/IMG_7707.jpg" caption="third image description">}}
 {{< /gallery >}}
 
 ### 指定欄位數目
