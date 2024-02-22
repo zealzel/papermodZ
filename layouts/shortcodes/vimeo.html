@@ -2,7 +2,7 @@
 <style>
 .media_vimeo{
   position: relative;
-  padding-bottom: {{ .Get "padding-bottom" | default "56.25%" }};
+  /* padding-bottom: {{ .Get "padding-bottom" | default "56.25%" }}; */
   width: 100%;
   height: 100%;
   /* margin: 3px 3px 3px 3px; */
@@ -16,6 +16,7 @@
 }
 </style>
 
-<div class="media_vimeo">
+<!-- <div class="media_vimeo"> -->
+<div class="meta-media" style="padding-bottom: {{ .Get "padding-bottom" | default "56.25%" }}" >
     <iframe class="video_vimeo" src="https://player.vimeo.com/video/{{ .Get "embed" }}?h={{ .Get "h_parameter" | default ""}}" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 </div>
