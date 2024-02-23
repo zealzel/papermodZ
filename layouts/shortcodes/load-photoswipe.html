@@ -3,6 +3,17 @@ Put this file in /layouts/shortcodes/load-photoswipe.html
 Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
 -->
 
+<style>
+.pswp__caption > .pswp__caption__center {
+    text-align: center;
+    max-width: 420px;
+    margin: 0 auto;
+    font-size: 35px;
+    padding: 10px;
+    line-height: 50px;
+    color: #CCC;
+</style>
+
 <!-- prevent this shortcode from being loaded more than once per page -->
 {{ if not ($.Page.Scratch.Get "photoswipeloaded") }}
   {{ $.Page.Scratch.Set "photoswipeloaded" 1 }}
