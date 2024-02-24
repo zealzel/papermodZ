@@ -161,14 +161,21 @@ gallery 可定義動態欄位數量, 範圍為2到6, 預設為5。
 
 ## Youtube影片
 
-> 使用shortcode `youtube`顯示youtube影片
+> 使用shortcode `youtube`顯示 youtube 影片
 
 ```
 {{</* youtube embed="VQraviuwbzU" */>}}
 ```
 
-{{< youtube embed="VQraviuwbzU" >}}
+{{< youtube embed="mqqft2x_Aa4" >}}
 
+> 使用shortcode `youtube-lazy` 以 lazy-load 方式加載 youtube 影片
+
+```
+{{</* youtube-lazy embed="VQraviuwbzU" */>}}
+```
+
+{{< youtube-lazy embed="mqqft2x_Aa4" >}}
 
 ## Vimeo影片
 
@@ -215,18 +222,4 @@ paragraph2
 <div style="font-size: 0.8em; font-style: italic">
 荷師尼陽羽哥兩林想草圓河意，村清我圓哭它幾汗他學不己，枝波陽火前朱定草冬金要科昌鼻香只中古王貝，方問就奶
 已牠節蝶種主國蛋回洋房貓要這笑一旦犬青相「爬」魚給抱口因怎，信肉帶燈錯候打民物刀入吹但未牠叫包交，院遠只
-</div>
-
-- 搭配css製作並排youtube影片
-
-```
-<div style="display: flex">
-  {{</* youtube embed="nJ81DFmgHdU" */>}}
-  {{</* youtube embed="oMpqj_nMsg0" */>}}
-</div>
-```
-
-<div style="display: flex">
-  {{< youtube embed="nJ81DFmgHdU" >}}
-  {{< youtube embed="oMpqj_nMsg0" >}}
 </div>
