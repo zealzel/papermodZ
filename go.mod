@@ -1,4 +1,4 @@
-module github.com/zealzel/yyy
+module github.com/zealzel/papermodZ
 
 go 1.18
 
